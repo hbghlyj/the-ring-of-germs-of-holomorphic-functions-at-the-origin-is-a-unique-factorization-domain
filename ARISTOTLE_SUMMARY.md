@@ -1,11 +1,11 @@
 # Summary of changes for run 3d38296f-b4e0-400b-b19e-7929d329e5c2
-I formalized the textbook proof that 𝒪ₙ is a UFD (assuming the Weierstrass Preparation Theorem) at the abstract/algebraic level you selected, in `RequestProject/Main.lean`.
+I formalized the textbook proof that $𝒪_n$ is a UFD (assuming the Weierstrass Preparation Theorem) at the abstract/algebraic level — given a domain B with a sub-UFD A = (UFD)[w] and the WPT existence+uniqueness as hypotheses, conclude B is a UFD (this faithfully formalizes the proof text without building analytic $𝒪_n$).
 
-Since the analytic ring 𝒪ₙ of germs of holomorphic functions and the Weierstrass Preparation Theorem (WPT) are not in Mathlib, I captured exactly the algebraic content the proof uses. The setup mirrors the proof's induction step:
+Since the analytic ring $𝒪_n$ of germs of holomorphic functions and the Weierstrass Preparation Theorem (WPT) are not in Mathlib, I captured exactly the algebraic content the proof uses. The setup mirrors the proof's induction step:
 
-- `R` plays the role of 𝒪ₙ₋₁, assumed a UFD (the induction hypothesis). Then `Polynomial R = 𝒪ₙ₋₁[w]` is automatically a UFD — this is Gauss's Lemma, available as a Mathlib instance.
-- `B` plays the role of 𝒪ₙ, an integral domain.
-- `ι : Polynomial R →+* B` is the injective inclusion 𝒪ₙ₋₁[w] ↪ 𝒪ₙ.
+- `R` plays the role of $𝒪_{n-1}$, assumed a UFD (the induction hypothesis). Then `Polynomial R = 𝒪ₙ₋₁[w]` is automatically a UFD — this is Gauss's Lemma, available as a Mathlib instance.
+- `B` plays the role of $𝒪_n$, an integral domain.
+- `ι : Polynomial R →+* B` is the injective inclusion $𝒪_{n-1}[w] ↪ 𝒪_n$.
 - `W : Submonoid (Polynomial R)` is the multiplicative set of Weierstrass polynomials.
 
 The WPT and Gauss's Lemma content is supplied as hypotheses:
