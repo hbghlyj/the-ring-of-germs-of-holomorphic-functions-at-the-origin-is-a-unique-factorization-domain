@@ -16,6 +16,6 @@ The WPT and Gauss's Lemma content is supplied as hypotheses:
 Two results are proved (both verified to compile with no warnings and to depend only on the standard axioms `propext`, `Classical.choice`, `Quot.sound`):
 
 - `WeierstrassUFD.prime_image_of_mem`: the image under `ι` of a prime Weierstrass polynomial is prime in `B`. This is the heart of the argument and is exactly where WPT uniqueness (`hU`) is used.
-- `WeierstrassUFD.uniqueFactorizationMonoid_of_weierstrass`: under the WPT data, `B` is a `UniqueFactorizationMonoid`, i.e. 𝒪ₙ is a UFD. The proof factors a Weierstrass polynomial in the UFD `Polynomial R`, transports its prime factors through `ι`, and applies `UniqueFactorizationMonoid.of_exists_prime_factors`.
+- `WeierstrassUFD.uniqueFactorizationMonoid_of_weierstrass`: under the WPT data, `B` is a `UniqueFactorizationMonoid`, i.e. $𝒪_n$ is a UFD. The proof factors a Weierstrass polynomial in the UFD `Polynomial R`, transports its prime factors through `ι`, and applies `UniqueFactorizationMonoid.of_exists_prime_factors`.
 
-The base case 𝒪₀ = ℂ is a field, hence a UFD in Mathlib, so combined with this inductive step the full induction on n goes through; this is documented in the file's header comment.
+The base case $𝒪_0 = ℂ$ is a field, hence a UFD in Mathlib, so combined with this inductive step the full induction on n goes through; this is documented in the file's header comment.
